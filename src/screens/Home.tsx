@@ -12,6 +12,7 @@ export function Home(){
    const[exercises, setExercises] =useState(['Puxada frontal','Remada curvada','Remanda unilateral','Levantamento terra'])
    const [groups, setGroups] = useState(['Costas', 'Bíceps', 'Tríceps', 'Ombro'])
    const [groupSelected, setGroupSelected] = useState("Costas")
+   
    const navigation = useNavigation<AppNavigatorRoutesProps>()
    function handleOpenExerciseDetails() {
      navigation.navigate('exercise')
