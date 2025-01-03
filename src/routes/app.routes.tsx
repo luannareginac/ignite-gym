@@ -41,7 +41,6 @@ export function AppRoutes() {
           height: Platform.OS === "android" ? "auto" : 96,
           paddingBottom: tokens.space["10"],
           paddingTop: tokens.space["6"],
-          justifyContent: shouldHideExerciseTab ? "flex-start" : "center", 
         },
       }}
     >
@@ -66,16 +65,17 @@ export function AppRoutes() {
           tabBarIcon: ({ color }) => <ProfileSvg fill={color} width={iconSize} height={iconSize} />,
         }}
       />
-      
-      {shouldHideExerciseTab ? null : (
-        <Screen
-          name="exercise"
-          component={Exercise}
-          options={{
-            tabBarButton: () => null, 
-          }}
-        />
-      )}
+      <Screen
+        name="exercise"
+        component={Exercise}
+        options={{
+          tabBarButton: () => null,
+          tabBarItemStyle: {
+            display: 'none'
+          }
+       }}
+      />
+     
     </Navigator>
   )
 }
