@@ -26,7 +26,7 @@ export function AppRoutes() {
   const { tokens } = gluestackUIConfig
   const iconSize = tokens.space["6"]
 
-  const shouldHideExerciseTab = true; // Defina sua lógica aqui, para esconder a aba `exercise`.
+  const shouldHideExerciseTab = true; 
 
   return (
     <Navigator
@@ -41,7 +41,7 @@ export function AppRoutes() {
           height: Platform.OS === "android" ? "auto" : 96,
           paddingBottom: tokens.space["10"],
           paddingTop: tokens.space["6"],
-          justifyContent: shouldHideExerciseTab ? "flex-start" : "center", // Centraliza os itens se a aba 'exercise' não for visível
+          justifyContent: shouldHideExerciseTab ? "flex-start" : "center", 
         },
       }}
     >
